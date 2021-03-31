@@ -31,15 +31,6 @@ public class LoginTest extends BrowserFactory {
 		login.validateDashboardHeader();
 	}
 
-	@Test(priority = 2)
-	public void invalidUserShouldNotAbleToLogin() throws ClassNotFoundException, SQLException, IOException {
-		login.enterName("demo1@techfios.com");
-		login.enterPassword("abc123");
-		login.clickSigninButton();
-		login.takeScreenshotAtEndOfTest(driver);
-		login.validateDashboardHeader();
-	}
-
 	@AfterMethod
 	public void tearDown() {
 		driver.close();
